@@ -1,0 +1,19 @@
+<ul>
+  {{#each-in labels as |lang value|}}
+    <li>
+      {{#question-label update-func=update-func remove-func=remove-func lang=lang value=value}}{{/question-label}}
+    </li>
+  {{/each-in}}
+</ul>
+
+<h2>New label</h2>
+
+<label>
+  Language:
+  {{input value=newLang}}
+</label>
+<label>
+  Value:
+  {{input value=newValue}}
+</label>
+<button {{action "add" newLang newValue}}>Add label</button>

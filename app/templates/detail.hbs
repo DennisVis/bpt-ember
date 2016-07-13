@@ -1,0 +1,15 @@
+<h1>{{model.name}}</h1>
+
+<h2>Labels</h2>
+
+<ul>
+  {{#each-in model.labels as |lang value|}}
+    <li>
+      {{lang}}: {{value}}
+    </li>
+  {{/each-in}}
+</ul>
+
+{{#link-to "overview"}}Back{{/link-to}}
+{{#link-to "edit" model}}Edit{{/link-to}}
+<button {{action "remove" model}}>Remove</button>

@@ -1,0 +1,11 @@
+<h1>Questions</h1>
+
+<div>
+  {{#each model as |question|}}
+    <h2>
+      {{#link-to "detail" question}}{{question.name}}{{/link-to}}
+    </h2>
+  {{/each}}
+</div>
+
+{{#link-to "create"}}New{{/link-to}}

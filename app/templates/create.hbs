@@ -1,0 +1,15 @@
+<h1>{{model.name}}</h1>
+
+<label>
+  Name:
+  {{input value=model.name}}
+</label>
+
+<h2>Labels</h2>
+
+{{#question-labels labels=model.labels}}{{/question-labels}}
+<br>
+<br>
+
+{{#link-to "overview"}}Cancel{{/link-to}}
+<button {{action "save" model}}>Save</button>
